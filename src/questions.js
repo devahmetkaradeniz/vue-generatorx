@@ -1,4 +1,7 @@
-import { settings } from './settings.js';
+import { getSettings } from './settings.js';
+import { pathValidation } from './validation.js'
+
+const settings = getSettings()
 
 const questions = [
     {
@@ -29,25 +32,29 @@ const questions = [
         type: 'input',
         name: 'path.view',
         message: 'View path ?',
-        defaultValue: settings.path.view
+        default: settings.path.view,
+        validate: pathValidation
     },
     {
         type: 'input',
         name: 'path.store',
         message: 'Store path ?',
-        defaultValue: settings.path.store
+        default: settings.path.store,
+        validate: pathValidation
     },
     {
         type: 'input',
         name: 'path.component',
         message: 'Component path?',
-        defaultValue: settings.path.component
+        default: settings.path.component,
+        validate: pathValidation
     },
     {
         type: 'input',
         name: 'path.style',
         message: 'Style path ?',
-        defaultValue: settings.path.style
+        default: settings.path.style,
+        validate: pathValidation
     }
 ]
 

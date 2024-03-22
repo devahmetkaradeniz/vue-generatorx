@@ -5,10 +5,10 @@
   "type": "module",
   "preferGlobal": true,
   "bin": {
-    "vue-generatorx": "src/bin/vue-generatorx",
-    "vue-generatorx-init": "src/bin/vue-generatorx-init",
-    "vgx": "src/bin/vue-generatorx",
-    "vgx-init": "src/bin/vue-generatorx-init"
+    "vue-generatorx": "src/bin/vue-generatorx.js",
+    "vue-generatorx-init": "src/bin/vue-generatorx-init.js",
+    "vgx": "src/bin/vue-generatorx.js",
+    "vgx-init": "src/bin/vue-generatorx-init.js"
   },
   "keywords": [
     "vue",
