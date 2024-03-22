@@ -7,8 +7,10 @@
   "bin": {
     "vue-generatorx": "src/bin/vue-generatorx.js",
     "vue-generatorx-init": "src/bin/vue-generatorx-init.js",
+    "vue-generatorx-component": "src/bin/vue-generatorx-component.js",
     "vgx": "src/bin/vue-generatorx.js",
-    "vgx-init": "src/bin/vue-generatorx-init.js"
+    "vgx-init": "src/bin/vue-generatorx-init.js",
+    "vgx-component": "src/bin/vue-generatorx-component.js"
   },
   "keywords": [
     "vue",
