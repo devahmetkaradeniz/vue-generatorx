@@ -9,14 +9,14 @@ const settings = {
     app: {
         api: 'options',
         language: 'javascript',
-        store: 'vuex',
+        store: 'pinia',
         style: 'css',
     },
     path: {
         view: './src/views',
         store: './src/stores',
         component: './src/components',
-        style: './src/assets/styles'
+        style: './src/assets'
     }
 }
 
