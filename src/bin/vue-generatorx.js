@@ -14,5 +14,5 @@ program
   .description(packageJson.description)
   .version(packageJson.version)
   .usage('<command> [options]')
-  .command('init', 'Create a local settings file (vgx.config.{js,ts})')
+  .command('init', 'Create a local settings file (vgx.config.json)')
   .parse(process.argv)
