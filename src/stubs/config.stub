@@ -1,15 +1,14 @@
-export default {
-    app: {
-        api: "{{APP_API}}",
-        language: "{{APP_LANGUAGE}}",
-        store: "{{APP_STORE}}",
-        style: "{{APP_STYLE}}"
-
-    },
-    path: {
-        view: "{{PATH_VIEW}}",
-        store: "{{PATH_STORE}}",
-        component: "{{PATH_COMPONENT}}",
-        style: "{{PATH_STYLE}}"
-    }
+{
+  "app": {
+    "api": "{{APP_API}}",
+    "language": "{{APP_LANGUAGE}}",
+    "store": "{{APP_STORE}}",
+    "style": "{{APP_STYLE}}"
+  },
+  "path": {
+    "view": "{{PATH_VIEW}}",
+    "store": "{{PATH_STORE}}",
+    "component": "{{PATH_COMPONENT}}",
+    "style": "{{PATH_STYLE}}"
+  }
 }

@@ -1,8 +1,9 @@
-import { writeFileSync, readFileSync, existsSync, unlinkSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { join, dirname, resolve } from 'path';
+import chalk from 'chalk';
 
-const file = 'vgx.config'
+const settingsFile = 'vgx.config.json'
 
 const settings = {
     app: {
@@ -20,17 +21,21 @@ const settings = {
 }
 
 export const getSettings = () => {
+    if (existsSync(resolve(settingsFile))) {
+        try {
+            const jsonFile = readFileSync(resolve(settingsFile), { encoding: 'utf-8' })
+            return JSON.parse(jsonFile)
+        } catch (e) {
+            console.error(chalk.red(`Error parsing local ${settingsFile} file.`))
+            process.exit(1)
+        }
+    }
     return settings
 }
 
-export const deleteSettings = (path) => {
-    const filePath = resolve(path)
-    if (existsSync(filePath)) {
-        unlinkSync(filePath)
-    }
-}
-
 export const setSettings = (userSettings) => {
+    userSettings = userSettings || settings
+
     let configStub = readFileSync(join(dirname(fileURLToPath(import.meta.url)), 'stubs', 'config.stub'), 'utf-8')
 
     configStub = configStub.replace(/{{APP_API}}/g, userSettings.app.api)
@@ -42,9 +47,5 @@ export const setSettings = (userSettings) => {
     configStub = configStub.replace(/{{PATH_COMPONENT}}/g, userSettings.path.component)
     configStub = configStub.replace(/{{PATH_STYLE}}/g, userSettings.path.style)
 
-    const extension = userSettings.app.language === 'typescript' ? 'ts' : 'js'
-
-    deleteSettings(`${file}.${extension === 'ts' ? 'js' : 'ts'}`)
-
-    writeFileSync(resolve(`${file}.${extension}`), configStub, { flag: 'w' })
+    writeFileSync(resolve(settingsFile), configStub, { flag: 'w' })
 }

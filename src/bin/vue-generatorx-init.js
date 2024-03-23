@@ -5,6 +5,8 @@ import init from '../commands/init.js';
 
 const program = new Command()
 
-program.parse(process.argv)
+program
+    .option('-y', 'default settings')
+    .parse(process.argv)
 
-init()
+init(program.opts().y)
