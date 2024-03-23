@@ -15,4 +15,5 @@ program
   .version(packageJson.version)
   .usage('<command> [options]')
   .command('init', 'Create a local settings file (vgx.config.json)')
+  .command('component', 'Create a component')
   .parse(process.argv)
