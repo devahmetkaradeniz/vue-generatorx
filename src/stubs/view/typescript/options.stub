@@ -1,0 +1,26 @@
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue';
+
+export default defineComponent({
+  data() {
+    return {
+      count: ref<number>(0)
+    }
+  },
+  methods: {
+    increment() {
+      this.count++
+    }
+  },
+  mounted() {
+    console.log(`The initial count is ${this.count}.`)
+  }
+})
+</script>
+
+<template>
+    <button @click="increment">Count is: {{ count }}</button>
+</template>
+
+<style lang="{{APP_CSS}}">
+</style>

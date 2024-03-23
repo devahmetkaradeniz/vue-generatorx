@@ -16,4 +16,5 @@ program
   .usage('<command> [options]')
   .command('init', 'Create a local settings file (vgx.config.json)')
   .command('component', 'Create a component')
+  .command('view', 'Create a view')
   .parse(process.argv)
