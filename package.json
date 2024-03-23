@@ -1,0 +1,42 @@
+{
+  "name": "vue-generatorx",
+  "version": "0.0.1",
+  "description": "A CLI tool for building Vue components",
+  "type": "module",
+  "preferGlobal": true,
+  "bin": {
+    "vue-generatorx": "src/bin/vue-generatorx.js",
+    "vue-generatorx-init": "src/bin/vue-generatorx-init.js",
+    "vue-generatorx-component": "src/bin/vue-generatorx-component.js",
+    "vue-generatorx-view": "src/bin/vue-generatorx-view.js",
+    "vue-generatorx-store": "src/bin/vue-generatorx-store.js",
+    "vue-generatorx-style": "src/bin/vue-generatorx-style.js",
+    "vgx": "src/bin/vue-generatorx.js",
+    "vgx-init": "src/bin/vue-generatorx-init.js",
+    "vgx-component": "src/bin/vue-generatorx-component.js",
+    "vgx-view": "src/bin/vue-generatorx-view.js",
+    "vgx-store": "src/bin/vue-generatorx-store.js",
+    "vgx-style": "src/bin/vue-generatorx-style.js"
+  },
+  "keywords": [
+    "vue",
+    "cli",
+    "generator"
+  ],
+  "author": "Ahmet Karadeniz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devahmetkaradeniz/vue-generatorx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devahmetkaradeniz/vue-generatorx/issues"
+  },
+  "homepage": "https://github.com/devahmetkaradeniz/vue-generatorx#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.16",
+    "user-settings": "^0.2.0"
+  }
+}

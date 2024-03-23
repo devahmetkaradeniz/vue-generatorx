@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+test
+test2
+npm-debug.log
+.idea
+*/.idea
+vgx.config.*

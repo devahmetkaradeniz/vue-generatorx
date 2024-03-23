@@ -1,0 +1,12 @@
+import { defineStore } from 'pinia';
+import { ref } from 'vue';
+
+export const use{{UPPERCASE_NAME}}Store = defineStore('{{NAME}}', () => {
+    const count = ref(0)
+
+    const double = () => count.value * 2
+
+    const increment = () => count.value++
+
+    return { count, double, increment }
+})
