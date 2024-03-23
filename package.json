@@ -10,11 +10,13 @@
     "vue-generatorx-component": "src/bin/vue-generatorx-component.js",
     "vue-generatorx-view": "src/bin/vue-generatorx-view.js",
     "vue-generatorx-store": "src/bin/vue-generatorx-store.js",
+    "vue-generatorx-style": "src/bin/vue-generatorx-style.js",
     "vgx": "src/bin/vue-generatorx.js",
     "vgx-init": "src/bin/vue-generatorx-init.js",
     "vgx-component": "src/bin/vue-generatorx-component.js",
     "vgx-view": "src/bin/vue-generatorx-view.js",
-    "vgx-store": "src/bin/vue-generatorx-store.js"
+    "vgx-store": "src/bin/vue-generatorx-store.js",
+    "vgx-style": "src/bin/vue-generatorx-style.js"
   },
   "keywords": [
     "vue",

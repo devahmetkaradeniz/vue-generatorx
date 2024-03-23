@@ -18,4 +18,5 @@ program
   .command('component', 'Create a component')
   .command('view', 'Create a view')
   .command('store', 'Create a store')
+  .command('style', 'Create a style')
   .parse(process.argv)
