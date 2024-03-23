@@ -1,0 +1,26 @@
+import { createStore } from 'vuex';
+
+const state = {
+    count: 0
+}
+
+const mutations = {
+    increment(state) {
+        state.count++
+    }
+}
+
+const actions = {
+    increment: (context) => context.commit('increment')
+}
+
+const getters = {
+    double: state => state.count * 2
+}
+
+export const use{{UPPERCASE_NAME}}Store = createStore({
+    state,
+    getters,
+    actions,
+    mutations
+})
